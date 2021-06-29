@@ -1,6 +1,7 @@
 package com.codesoom.demo.domain;
 
 import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -29,4 +30,13 @@ public class Food {
     @ManyToOne
     @JoinColumn(name = "member_id")
     private Member member;
+
+    @Builder
+    public Food(Long id, String name, Long kcal, LocalDateTime eatTime, Member member) {
+        this.id = id;
+        this.name = name;
+        this.kcal = kcal;
+        this.eatTime = eatTime;
+        this.member = member;
+    }
 }
