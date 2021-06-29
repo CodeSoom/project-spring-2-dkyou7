@@ -39,4 +39,12 @@ public class Food {
         this.eatTime = eatTime;
         this.member = member;
     }
+
+    public Food update(String foodName, Long kcal, LocalDateTime eatTime, Member member) {
+        this.name = foodName;
+        this.kcal = kcal;
+        this.eatTime = eatTime;
+        this.member = member;
+        return this;
+    }
 }
