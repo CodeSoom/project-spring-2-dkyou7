@@ -19,4 +19,4 @@
 ---
 
 #### 📌 주차별 구현 기능
-[🎈 1주차 바로가기](https://github.com/CodeSoom/project-spring-2-dkyou7/issues/1)
+[🎈 1주차 바로가기](https://github.com/CodeSoom/project-spring-2-dkyou7/issues/1 )
