@@ -40,10 +40,9 @@ public class Food {
         this.member = member;
     }
 
-    public Food update(String foodName, Long kcal, LocalDateTime eatTime, Member member) {
+    public Food update(String foodName, Long kcal, Member member) {
         this.name = foodName;
         this.kcal = kcal;
-        this.eatTime = eatTime;
         this.member = member;
         return this;
     }
