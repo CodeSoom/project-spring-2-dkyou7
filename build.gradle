@@ -58,6 +58,12 @@ dependencies {
     // test
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     //testImplementation 'org.springframework.security:spring-security-test'
+
+    //JUnit5
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.7.1'
+    //@ParameterizedTest를 사용하기 위해서 필요한 의존성
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.7.1'
 }
 
 test {
