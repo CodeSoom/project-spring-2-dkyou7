@@ -45,12 +45,12 @@ public class FoodDto {
 
         private Long id;
         private String name;
-        private Long kcal;
+        private Double kcal;
         private LocalDateTime eatTime;
         private Member member;
 
         @Builder
-        public Response(Long id, String name, Long kcal, LocalDateTime eatTime, Member member) {
+        public Response(Long id, String name, Double kcal, LocalDateTime eatTime, Member member) {
             this.id = id;
             this.name = name;
             this.kcal = kcal;
@@ -83,7 +83,7 @@ public class FoodDto {
         public Food toEntity() {
             return Food.builder()
                     .name(foodName)
-                    .kcal(Long.parseLong(kcal))
+                    .kcal(Double.parseDouble(kcal))
                     .eatTime(LocalDateTime.now())
                     .member(member)
                     .build();
@@ -101,7 +101,7 @@ public class FoodDto {
         private Member member;
 
         public Food apply(Food food) {
-            return food.update(foodName,Long.parseLong(kcal),member);
+            return food.update(foodName,Double.parseDouble(kcal),member);
         }
     }
 }

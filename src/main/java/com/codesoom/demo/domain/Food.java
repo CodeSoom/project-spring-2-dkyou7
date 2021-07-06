@@ -23,7 +23,7 @@ public class Food {
 
     private String name;
 
-    private Long kcal;
+    private Double kcal;
 
     private LocalDateTime eatTime;
 
@@ -32,7 +32,7 @@ public class Food {
     private Member member;
 
     @Builder
-    public Food(Long id, String name, Long kcal, LocalDateTime eatTime, Member member) {
+    public Food(Long id, String name, Double kcal, LocalDateTime eatTime, Member member) {
         this.id = id;
         this.name = name;
         this.kcal = kcal;
@@ -40,7 +40,7 @@ public class Food {
         this.member = member;
     }
 
-    public Food update(String foodName, Long kcal, Member member) {
+    public Food update(String foodName, Double kcal, Member member) {
         this.name = foodName;
         this.kcal = kcal;
         this.member = member;
