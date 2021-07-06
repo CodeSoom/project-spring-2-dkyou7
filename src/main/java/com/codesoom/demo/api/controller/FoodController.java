@@ -36,7 +36,7 @@ public class FoodController {
      * @return 생성된 음식.
      */
     @PostMapping
-    //@ResponseStatus(HttpStatus.CREATED)
+    @ResponseStatus(HttpStatus.CREATED)
     public ApiResponseDto<FoodDto.ResponseOne> create(@RequestBody @Valid FoodDto.Create create) {
         return ApiResponseDto.createOK(new FoodDto.ResponseOne(foodService.create(create)));
     }
